@@ -7,7 +7,7 @@ public class PostModel {
     public String location;
     public String userId;
 
-    // 🔸 Required empty constructor for Firestore
+    //  Required empty constructor for Firestore
     public PostModel() {}
 
     public PostModel(String title, String description, String imageUri, String location, String userId) {
