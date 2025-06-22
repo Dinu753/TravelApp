@@ -55,7 +55,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
             Toast.makeText(context, "Comment on: " + post.getTitle(), Toast.LENGTH_SHORT).show();
         });
 
-        // Add this to open MapActivity on location click
         holder.locationText.setOnClickListener(v -> {
             String location = post.getLocation();
             if (location != null && !location.isEmpty()) {
