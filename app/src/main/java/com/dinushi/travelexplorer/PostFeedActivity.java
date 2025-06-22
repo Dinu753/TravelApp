@@ -86,7 +86,7 @@ public class PostFeedActivity extends AppCompatActivity {
         }
     }
 
-    // 🔁 Load posts from Firebase Firestore
+    // Load posts from Firebase Firestore
     private void fetchPostsFromFirebase() {
         db.collection("posts")
                 .get()
