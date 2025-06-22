@@ -28,20 +28,20 @@ public class Login extends AppCompatActivity {
         signupText = findViewById(R.id.signupText);
         loginButton = findViewById(R.id.loginButton);
 
-        // 🔐 Connect EditTexts
-        emailField = findViewById(R.id.email);       // make sure this ID exists in XML
-        passwordField = findViewById(R.id.password); // make sure this ID exists in XML
+        // connect EditTexts
+        emailField = findViewById(R.id.email);       
+        passwordField = findViewById(R.id.password); 
 
-        // 🔥 Initialize FirebaseAuth
+        // Initialize FirebaseAuth
         mAuth = FirebaseAuth.getInstance();
 
-        // 🧭 Navigate to Register screen
+        //  Navigate to Register screen
         signupText.setOnClickListener(v -> {
             Intent intent = new Intent(Login.this, RegisterActivity.class);
             startActivity(intent);
         });
 
-        // ✅ Login Button Logic with Validation
+        // Login Button Logic with Validation
         loginButton.setOnClickListener(v -> {
             String email = emailField.getText().toString().trim();
             String password = passwordField.getText().toString().trim();
@@ -51,7 +51,7 @@ public class Login extends AppCompatActivity {
                 return;
             }
 
-            // 🔐 Firebase Login
+            //  Firebase Login
             mAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(task -> {
                         if (task.isSuccessful()) {
